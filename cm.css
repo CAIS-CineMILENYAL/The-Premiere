@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    padding: 16px 5%;
+    border-bottom: 1px solid #d4af37;
+    background-color: #111;
+}
+
+header img {
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cais-logo {
+    justify-self: start;
+}
+
+.cinemilenyal-logo {
+    justify-self: end;
+}
+
+header h1 {
+    margin: 0;
+    color: #d4af37;
+    font-size: 34px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+
+.content {
+    padding: 24px 0 56px;
+}
+
+.ticket-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 28px auto;
+}
+
+#Opening {
+    margin: 34px 0 12px;
+    color: #d4af37;
+    font-size: 65px;
+    line-height: 1.1;
+}
+
+#no2 {
+    margin: 12px 0 24px;
+    padding: 0;
+    color: #fff;
+    font-size: 27px;
+}
+
+main h3 {
+    max-width: 280px;
+    margin: 30px auto 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d4af37;
+    color: #d4af37;
+    font-size: 21px;
+}
+
+main p {
+    margin: 5px 0;
+}
+
+main h2:not(#Opening, #no2) {
+    color: #d4af37;
+}
+
+@media (max-width: 600px) {
+    header {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 16px;
+        padding: 12px 20px;
+    }
+
+    header img {
+        width: 84px;
+        height: 84px;
+    }
+
+    header h1 {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        font-size: 28px;
+    }
+
+    #Opening {
+        font-size: 40px;
+    }
+
+    #no2 {
+        font-size: 22px;
+    }
+}
